@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.ct24" version="1.1.17" name="ČT24" provider-name="Petr Kutálek">
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs">Živé vysílání ČT24</summary>
+    <description lang="cs">ČT24 je televizní kanál, který nabízí informace z domova, ze škol, z politiky, ze sportu a dalších oblastí.</description>
+    <disclaimer lang="cs">Neoficiální doplněk, který není poskytován Českou televizí.</disclaimer>
+    <platform>all</platform>
+    <language>cs</language>
+    <license>GPL 2, June 1991</license>
+    <website>https://ct24.ceskatelevize.cz/</website>
+    <forum>https://github.com/petrkutalek/plugin.video.ct24/issues</forum>
+    <email>petr@kutalek.cz</email>
+    <source>https://github.com/petrkutalek/plugin.video.ct24/</source>
+    <assets>
+      <icon>icon.png</icon>
+      <screenshot>resources/6846603e-9042-4451-80dd-0005db16f537.jpg</screenshot>
+      <screenshot>resources/f50f842b-4066-49cf-8309-6586f71063de.jpg</screenshot>
+      <screenshot>resources/f61f5861-c306-4f24-aa53-8e233f5cb11c.jpg</screenshot>
+      <clearlogo>resources/d9de0907-7dd6-4ce4-aceb-f0c6c4ae9a29.png</clearlogo>
+    </assets>
+  </extension>
+
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+</addon>

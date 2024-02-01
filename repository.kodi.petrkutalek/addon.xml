@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.kodi.petrkutalek" name="Petr Kutalek's Add-ons" version="1.1.5" provider-name="Petr Kutalek">
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs">Repozitář Kodi modulů</summary>
+    <description lang="cs">Tento repozitář obsahuje moduly, které jsem napsal pro své potřeby</description>
+    <platform>all</platform>
+    <language>cs</language>
+    <license>GPL 2, June 1991</license>
+    <website>https://github.com/petrkutalek/kodi-addons</website>
+    <forum>https://github.com/petrkutalek/kodi-addons/issues</forum>
+    <source>https://github.com/petrkutalek/kodi-addons</source>
+    <nofanart>true</nofanart>
+  </extension>
+
+  <requires>
+    <import addon="xbmc.addon" version="20.0.0"/>
+  </requires>
+
+  <extension point="xbmc.addon.repository">
+    <dir minversion="20.0.0">
+      <info>https://raw.githubusercontent.com/petrkutalek/kodi-addons/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/petrkutalek/kodi-addons/master/addons.xml.sha256</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/petrkutalek/kodi-addons/master/</datadir>
+    </dir>
+  </extension>
+</addon>
