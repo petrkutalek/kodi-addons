@@ -1,5 +1,5 @@
 # coding: utf-8
-# pylint: disable=import-error
+# pylint: disable=import-error, line-too-long
 
 import json
 import sys
@@ -37,8 +37,8 @@ def route(paramstring):
         xbmcplugin.addDirectoryItem(handle, f"{sys.argv[0]}?action=play", li, False)
         xbmcplugin.endOfDirectory(handle)
     elif params.get("action") == "play":
-        URL = "https://api.ceskatelevize.cz/video/v1/playlist-live/v1/stream-data/channel/CH_24?canPlayDrm=false&streamType=flash&quality=web&maxQualityCount=2"
-        with urllib.request.urlopen(URL) as res:
+        url = "https://api.ceskatelevize.cz/video/v1/playlist-live/v1/stream-data/channel/CH_24?canPlayDrm=false&streamType=flash&quality=web&maxQualityCount=2"
+        with urllib.request.urlopen(url) as res:
             content = res.read()
         data = json.loads(content)
         stream_url = data["streamUrls"]["main"]
