@@ -1,0 +1,14 @@
+name: Tests
+on: [push]
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-utils
+      - name: Validate XML files
+        run: |
+          find . -type f -iname '*.xml' -exec xmllint --noout -pedantic {} +
